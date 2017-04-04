@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerCommand>C:\Program Files\MeVisLab2.8.1VC14-64\Packages\MeVisLab\IDE\bin\MeVisLab_d.exe</LocalDebuggerCommand>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommand>C:\Program Files\MeVisLab2.8.1VC14-64\Packages\MeVisLab\IDE\bin\MeVisLab_d.exe</LocalDebuggerCommand>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LocalDebuggerCommandArguments>C:\Users\Vivemachine\Desktop\VR\HTC-Vive.mlab</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <ShowAllFiles>false</ShowAllFiles>
+  </PropertyGroup>
+</Project>

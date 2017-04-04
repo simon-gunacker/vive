@@ -1,0 +1,21 @@
+//----------------------------------------------------------------------------------
+//! _MLHTCVive module definitions.
+/*!
+// \file    HTCVive.script
+// \author  Medical
+// \date    2016-07-25
+*/
+//----------------------------------------------------------------------------------
+
+
+Window {
+  Vertical {
+    margin = 3
+    Button Offline {}
+    Button initVR {}
+  }
+}
+//Commands { 
+//  source = $(LOCAL)/MyScript.js 
+//  FieldListener iterationTrigger { command = updateViewer } 
+//} 

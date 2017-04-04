@@ -1,0 +1,149 @@
+// MDL v1 utf8
+network  {
+  watchlist = ""
+}
+module SoSeparator {
+  internal  {
+    frame = "6197 937 104 64"
+    moduleGroupName = ""
+    windows  {
+      window _viewer {
+        geometry = "946 128 606 540"
+        sizeHint = "400 400"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = 3DUserView
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+  }
+}
+module SoWEMRenderer {
+  internal  {
+    frame = "6185 1069 128 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "520 347 443 500"
+        sizeHint = "443 500"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "717 270 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoWEMRenderer
+    interactionProviderID = ""
+    autoApply = TRUE
+    autoUpdate = TRUE
+    autoClear = TRUE
+    enableCreaseAngle = FALSE
+    creaseAngle = 75
+    useHighlightSelected = FALSE
+    highlightColor = "1 0 0"
+    highlightIntensity = 0.5
+    faceRenderingMode = WEM_FACE_RENDERING_MODE_AUTO
+    allowHits = TRUE
+    performPreHitTest = FALSE
+    cursorShape = CROSS_CURSOR
+    colorMode = WEM_COLOR_NODE_COLORS
+    drawFaces = TRUE
+    faceDiffuseColor = "0.792156994342804 0.792156994342804 0.792156994342804"
+    useFaceAmbientColor = TRUE
+    faceAmbientColor = "0.266667008399963 0.266667008399963 0.266667008399963"
+    useFaceSpecularColor = TRUE
+    faceSpecularColor = "0.0666669979691505 0.0666669979691505 0.0666669979691505"
+    faceAlphaValue = 1
+    faceShininessValue = 1
+    primitiveValueLists = LUT
+    selectedPrimitiveValueList = LUT
+    selectedPrimitiveValueAlphaList = LUT
+    primitiveValueListValid = TRUE
+    primitiveValueListAlphaValid = TRUE
+    overwriteAlphaWithPVL = FALSE
+    wemPatchToRender = -1
+    maxWEMPatchIndex = 0
+    sendAdjacency = FALSE
+    selectedTab = 0
+  }
+}
+module WEMLoad {
+  internal  {
+    frame = "6117 1233 88 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1075 574 320 360"
+        sizeHint = "320 360"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "365 222 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = DataLoad
+    id = 0
+    autoApply = TRUE
+    updateMode = AutoUpdate
+    overwriteLabelDescription = FALSE
+    label = ""
+    description = ""
+    shouldComputeNormals = FALSE
+    filename = C:/Users/Vivemachine/Desktop/VR/Cranio_defect.stl
+    mirrorFaces = FALSE
+    generateEdges = TRUE
+    triangulateFaces = FALSE
+    triangulationMode = Strip
+  }
+}
+module HTCVive {
+  internal  {
+    frame = "6009 1077 80 56"
+    moduleGroupName = ""
+    windows  {
+      window _automatic {
+        geometry = "5 132 491 698"
+        sizeHint = "339 274"
+        wasOpen = yes
+      }
+      window _default {
+        geometry = "798 514 339 113"
+        sizeHint = "339 113"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = HTCVive
+    id = 0
+    autoApply = TRUE
+    updateMode = AutoUpdate
+    overwriteLabelDescription = FALSE
+    label = ""
+    description = ""
+    shouldComputeNormals = TRUE
+    workDirectlyOnInputWEMs = FALSE
+    listenToFinishNotifications = TRUE
+    listenToRepaintNotifications = TRUE
+    listenToSelectionChangedNotifications = TRUE
+    triangulationMode = Strip
+  }
+}
+connections  {
+  3DUserView.children = SoWEMRenderer.self
+  SoWEMRenderer.inWEM = DataLoad.outWEM
+  HTCVive.inWEM = DataLoad.outWEM
+}
+networkModel = ""

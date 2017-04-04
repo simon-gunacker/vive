@@ -1,0 +1,25 @@
+# exclude Folders
+General/bin
+General/Documentation
+General/lib/_MLHTCVive*
+General/lib/updated
+General/Modules/Inventor
+General/Modules/Macros
+General/Projects
+General/Sources/Inventor
+General/Sources/Shared
+General/Sources/ML/_MLHTCVive/.vs
+General/Sources/ML/_MLHTCVive/Debug
+General/Sources/ML/_MLHTCVive/tmp
+
+# exclude files globally
+**/*.cache
+
+# some more files to exclude
+General/Sources/ML/_MLHTCVive/_MLHTCVive.aps
+General/Sources/ML/_MLHTCVive/_MLHTCVive.rc
+General/Sources/ML/_MLHTCVive/_MLHTCVive.sln
+General/Sources/ML/_MLHTCVive/_MLHTCVive.VC.db
+General/Sources/ML/_MLHTCVive/_MLHTCVive.vcxproj
+General/Sources/ML/_MLHTCVive/_MLHTCVive.vcxproj.filters
+General/Sources/ML/_MLHTCVive/_MLHTCVive.vcxproj.user

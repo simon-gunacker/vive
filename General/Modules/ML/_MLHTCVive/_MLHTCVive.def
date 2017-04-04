@@ -1,0 +1,9 @@
+MLModule HTCVive {
+  DLL                = "_MLHTCVive"
+  genre              = "Virtual Reality"
+  author             = "Simon Gunacker"
+  comment            = "Not intended for productive use."
+  keywords           = "Virtual Reality"
+  seeAlso            = ""
+  externalDefinition = $(LOCAL)/HTCVive.script
+}
